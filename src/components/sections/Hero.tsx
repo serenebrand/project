@@ -119,13 +119,13 @@ export function Hero({ photo }: { photo?: Photo }) {
                 <Phone className={factIcon} strokeWidth={1.5} aria-hidden="true" />
                 Телефон
               </dt>
-              {/* 44px tap rows; the negative margins keep the text on the same rhythm as the other columns. */}
-              <dd className="-mt-1 -mb-2 flex flex-col items-start">
+              {/* 48px tap rows: with these margins the numbers sit on the 1st and 3rd text lines of the hours column. */}
+              <dd className="-mt-1.5 -mb-3 flex flex-col items-start">
                 {phones.map((phone) => (
                   <a
                     key={phone.tel}
                     href={phone.href}
-                    className={cn(factValue, "flex min-h-11 items-center whitespace-nowrap transition-colors hover:text-ice")}
+                    className={cn(factValue, "flex min-h-12 items-center whitespace-nowrap transition-colors hover:text-ice")}
                   >
                     {phone.display}
                   </a>

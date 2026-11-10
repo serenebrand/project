@@ -142,7 +142,8 @@ export function Header() {
             <m.div
               key={MENU_ID}
               id={MENU_ID}
-              className="fixed inset-0 z-40 overflow-y-auto overscroll-contain bg-ink-950/95 backdrop-blur-xl lg:hidden"
+              // Nearly opaque: where backdrop-filter is not rendered, a lighter veil leaves a readable ghost of the page.
+              className="fixed inset-0 z-40 overflow-y-auto overscroll-contain bg-ink-950/98 backdrop-blur-xl lg:hidden"
               initial={{ opacity: 0, y: -12 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -12 }}
